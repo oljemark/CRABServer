@@ -478,7 +478,7 @@ class MasterWorker(object):
             for task in pendingwork:
                 if task['tw_name'] != current_tw_name:
                     self.logger.debug("Skipping task %s since it is assigned to another TW (%s).",task['tm_taskname'], task['tw_name'])
-                    continue           
+                    continue
                 self.logger.debug("Restarting QUEUED task %s", task['tm_taskname'])
                 self.updateWork(task['tm_taskname'], task['tm_task_command'], 'NEW')
             if not pendingwork:

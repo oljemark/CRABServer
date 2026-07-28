@@ -843,7 +843,7 @@ if __name__ == "__main__":
             except Exception as e: # pylint: disable=broad-exception-caught
                 print(f"Error: {e}")
                 print("PsetHash could not be extracted from FrameworkJobReport. Trying to extract from EdmProvDump...")
-                try:    
+                try:
                     AddPsetHashEdmProvDump(report=rep, scramTool=scram)
                 except Exception as ex:  # pylint: disable=broad-except
                     exmsg = "Unable to compute pset hash for job output. Got exception:"

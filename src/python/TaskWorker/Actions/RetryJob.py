@@ -465,7 +465,7 @@ class RetryJob():
             raise FatalError("Job wrapper finished with exit code %d.\nExit message:\n  %s" % (exitCode, exitMsg.replace('\n', '\n  ')))
 
         msg = "Job or stageout wrapper finished with exit code %d." % (exitCode)
-        self.logger.info(msg)      
+        self.logger.info(msg)
         return 0
 
     # = = = = = RetryJob = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
